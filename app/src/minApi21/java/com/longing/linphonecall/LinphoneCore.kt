@@ -6,7 +6,8 @@ import org.linphone.core.tutorials.TutorialHelloWorld
 
 class LinphoneCore(private val context: Context) {
     fun getVersionCode(): String {
-        val core = LinphoneCoreFactory.instance().createLinphoneCore(TutorialHelloWorld(), context)
+        val core = LinphoneCoreFactory.instance()
+            .createLinphoneCore(TutorialHelloWorld(), context)
         return core.version
     }
 }
