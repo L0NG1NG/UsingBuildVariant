@@ -16,4 +16,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "LinPhoneCall"
-include ':app'
+include ':app', ':liblinphone-sdk'

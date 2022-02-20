@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/WorkSpace/Android/AndroidStudioProjects/TrySometing/LinPhoneCall/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/WorkSpace/Android/AndroidStudioProjects/TrySometing/LinPhoneCall/app/src/minApi23/res/layout/activity_main.xml" value="0.24270833333333333" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/minApi23/java/com/longing/linphonecall/MainActivity.kt" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

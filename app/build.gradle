@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.longing.linphonecall"
-        minSdk 23
+        minSdk 21
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -24,6 +24,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "api"
+    productFlavors {
+        minApi21 {
+            dimension "api"
+            minSdk 21
+        }
+        minApi23 {
+            dimension "api"
+            minSdk 23
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -31,6 +43,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -40,8 +53,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     // Latest version is 5.0.x, using + to get the latest available
-    implementation 'org.linphone:linphone-sdk-android:5.0+'
-
+    minApi23Implementation 'org.linphone:linphone-sdk-android:5.0.70'
+    minApi21Implementation project(':liblinphone-sdk')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
